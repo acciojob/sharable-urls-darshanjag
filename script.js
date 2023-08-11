@@ -6,7 +6,7 @@
             const submitButton = document.getElementById("button");
 
             submitButton.addEventListener("click", function() {
-	            const nameValue = nameInput.value;
+	            const nameValue =encodeURIComponent(nameInput.value);
                 const yearValue = yearInput.value;
                 const queryString = `?name=${nameValue}?year=${yearValue}`;
                 urlH3.textContent = `https://localhost:8080/${queryString}`;
